@@ -4,6 +4,10 @@ import support.cse131.NotYetImplementedException;
 
 public class Question {
 	
+	private String prompt;
+	private String answer;
+	private int points;
+	
 	/**
 	 * Constructor
 	 * @param prompt
@@ -11,8 +15,35 @@ public class Question {
 	 * @param points
 	 */
 	public Question(String prompt, String answer, int points) {
-		throw new NotYetImplementedException();
+		this.prompt = prompt;
+		this.answer = answer;
+		this.points = points;
 	}
+	
+	public String getPrompt() {
+		return this.prompt;
+	}
+	
+	public String getAnswer() {
+		return this.answer;
+	}
+	
+	public int getPoints() {
+		return this.points;
+	}
+	
+	public void setPrompt(String s) {
+		this.prompt = s;
+	}
+	
+	public void setAnswer(String s) {
+		this.answer = s;
+	}
+	
+	public void setPoints(int p) {
+		this.points = p;
+	}
+	
 	
 	/**
 	 * Prints out the current question's prompt, with a parenthetical 
@@ -35,23 +66,11 @@ public class Question {
 		}
 	}
 	
-	/**
-	 * Getter method for the points possible
-	 * @return int points
-	 */
-	public int getPoints() {
-		throw new NotYetImplementedException();
-	}
-	
-	/**
-	 * Getter method for the answer to the question
-	 * @return String answer
-	 */
-	public String getAnswer() {
-		throw new NotYetImplementedException();
-	}
 	
 	public static void main(String[] args) {
 		// TODO: Create a Question object of your own!
+		
+		Question q1 = new Question("What is 5+4?", "9", 1);
+		
 	}
 }
